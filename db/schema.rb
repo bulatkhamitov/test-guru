@@ -10,12 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_07_232445) do
+ActiveRecord::Schema.define(version: 2019_11_10_230126) do
 
   create_table "answers", force: :cascade do |t|
-    t.boolean "correct", null: false
+    t.boolean "correct", default: false, null: false
+    t.string "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "questions_id"
+    t.index ["questions_id"], name: "index_answers_on_questions_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -24,23 +27,45 @@ ActiveRecord::Schema.define(version: 2019_11_07_232445) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "passedtests", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "users_id"
+    t.integer "tests_id"
+    t.index ["tests_id"], name: "index_passedtests_on_tests_id"
+    t.index ["users_id"], name: "index_passedtests_on_users_id"
+  end
+
   create_table "questions", force: :cascade do |t|
     t.string "text", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "tests_id"
+    t.index ["tests_id"], name: "index_questions_on_tests_id"
   end
 
   create_table "tests", force: :cascade do |t|
     t.string "title", null: false
-    t.integer "level"
+    t.integer "level", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "categories_id"
+    t.integer "users_id"
+    t.index ["categories_id"], name: "index_tests_on_categories_id"
+    t.index ["users_id"], name: "index_tests_on_users_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name", null: false
+    t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "answers", "questions", column: "questions_id"
+  add_foreign_key "passedtests", "tests", column: "tests_id"
+  add_foreign_key "passedtests", "users", column: "users_id"
+  add_foreign_key "questions", "tests", column: "tests_id"
+  add_foreign_key "tests", "categories", column: "categories_id"
+  add_foreign_key "tests", "users", column: "users_id"
 end
