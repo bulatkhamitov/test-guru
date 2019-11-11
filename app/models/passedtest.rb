@@ -1,2 +1,0 @@
-class Passedtest < ApplicationRecord
-end
