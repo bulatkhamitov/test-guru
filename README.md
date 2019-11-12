@@ -4,37 +4,37 @@
 
 * Пользователь (User):
 
-  * id: integer
-  * name: string
-  * email: string
+  * `id`: `integer`
+  * `name`: `string`
+  * `email`: `string`
 
 * Тест (Test):
 
-  * id: integer
-  * *user_id: integer*
-  * *categoriey_id: integer*
-  * title: string
-  * level: integer
+  * `id`: `integer`
+  * `user_id`: `integer`
+  * `category_id: `integer`
+  * `title`: `string`
+  * `level`: `integer`
 
 * Вопрос (Question):
 
-  * id: integer
-  * *test_id: integer*
-  * text: string
+  * `id`: `integer`
+  * `test_id`: `integer`
+  * `text`: `string`
 
 * Ответ (Answer):
 
-  * id: integer
-  * *question_id: integer*
-  * correct: boolean
-  * text: string
+  * `id`: `integer`
+  * `question_id`: `integer`
+  * `correct`: `boolean`
+  * `text`: `string`
 
 * Категория (Category):
 
-  * id: integer
-  * title: string
+  * `id`: `integer`
+  * `title`: `string`
 
 * Тесты, пройденные пользователем (PassedTests):
 
-  * *user_id: integer*
-  * *test_id: integer*
+  * `user_id`: `integer`
+  * `test_id`: `integer`
