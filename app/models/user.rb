@@ -1,5 +1,5 @@
 class User < ApplicationRecord
   def passed_by_level(level)
-    Test.joins('JOIN passedtests ON passedtests.tests_id = tests_id').where(tests: { level: level }, passedtests: { users_id: self.id })
+    Test.joins('JOIN passed_tests ON passed_tests.test_id = tests.id').where(passed_tests: { user_id: id }, level: level)
   end
 end
