@@ -9,13 +9,13 @@
 categories = Category.create([{ title: 'Ruby' },
                               { title: 'Python' }])
 
-users = User.create([{ role: 'creator', name: 'Andrew',  email: 'andrew@compuserve.com', password: 'qwerty123' },
+users = User.create([{ name: 'Andrew',  email: 'andrew@compuserve.com', password: 'qwerty123' },
                      { name: 'Brennan', email: 'brennan@yahoo.com',     password: 'zxcvbn456' },
                      { name: 'Cullen',  email: 'cullen@gmail.com',      password: 'asdfgh789' }])
 
-tests = Test.create([{ title: 'Ruby Basics',     level: 0, creator: users[0], category: categories[0] },
-                     { title: 'Python Basics',   level: 1, creator: users[0], category: categories[1] },
-                     { title: 'Python Advanced', level: 2, creator: users[0], category: categories[1] }])
+tests = Test.create([{ title: 'Ruby Basics',     level: 0, creator: users[1], category: categories[0] },
+                     { title: 'Python Basics',   level: 1, creator: users[1], category: categories[1] },
+                     { title: 'Python Advanced', level: 2, creator: users[1], category: categories[1] }])
 
 texts = ['What programming methodology does Ruby implement?',
            'What kind of type system does Ruby use?',
