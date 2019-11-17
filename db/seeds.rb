@@ -18,11 +18,11 @@ tests = Test.create([{ title: 'Ruby Basics',     level: 0, creator: users[1], ca
                      { title: 'Python Advanced', level: 2, creator: users[1], category: categories[1] }])
 
 texts = ['What programming methodology does Ruby implement?',
-           'What kind of type system does Ruby use?',
-           'Python is..',
-           'What kind of type system does Python use?',
-           'Which library allows to operate with multidensional arrays?',
-           'What is the complexity of the built-in sorted function?']
+         'What kind of type system does Ruby use?',
+         'Python is..',
+         'What kind of type system does Python use?',
+         'Which library allows to operate with multidensional arrays?',
+         'What is the complexity of the built-in sorted function?']
 
 questions = Question.create([{ text: texts[0], test: tests[0] },
                              { text: texts[1], test: tests[0] },
