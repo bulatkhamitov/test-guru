@@ -5,7 +5,18 @@ class Test < ApplicationRecord
   has_many :passed_tests, dependent: :destroy
   has_many :users, through: :passed_tests, dependent: :destroy
 
-  def self.sort_by_category(category)
-    joins(:category).where(categories: { title: category }).order(title: :desc).pluck(:title)
+  validates :title, presence: true
+  validates :title, uniqueness: { scope: :level }
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
+  scope :easy, -> { where(level: 0..1) }
+  scope :medium, -> { where(level: 2..4) }
+  scope :hard, -> { where(level: 5..Float::INFINITY) }
+
+  scope :with_level, -> (level) { where(level: level) }
+  scope :sort_by_category, -> (category) { joins(:category).where(categories: { title: category }).order(title: :desc) }
+
+  def self.sorted_by_category(category)
+    sort_by_category(category).pluck(:title)
   end
 end
