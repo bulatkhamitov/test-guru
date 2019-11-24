@@ -1,5 +1,5 @@
 module TestGuru
   class Application
-    VERSION = "0.5.2".freeze
+    VERSION = "0.6.1".freeze
   end
 end
