@@ -9,11 +9,10 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    render plain: @test.questions.where(id: params[:id]).inspect
+    render plain: @question.inspect
   end
 
-  def new
-  end
+  def new; end
 
   def create
     @test.questions.create(question_params)

@@ -8,12 +8,10 @@ class TestsController < ApplicationController
   end
 
   def show
-    # @test = Test.find(params[:test_id])
     render inline: '<%= @test.title %>'
   end
 
-  def new
-  end
+  def new; end
 
   def create
     @test = Test.create(test_params)
