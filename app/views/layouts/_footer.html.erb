@@ -1,0 +1,14 @@
+<div id="push"></div>
+<hr align="center">
+<footer class="footer navbar-fixed-bottom">
+  <div class="container">
+    <nav>
+      <ul>
+        <li><%= link_to "Об авторе", 'about/author', target: :_blank %></li>
+        <li><%= link_to "Описание проекта", 'about', target: :_blank %></li>
+        <li><%= link_to "Онлайн-школа Thinknetica", "https://thinknetica.com/", target: :_blank%></li>
+      </ul>
+    </nav>
+    <%= current_year %> | <%= '0.7.0' %> | <%= githib_url(author_git, repo) %>
+  </div>
+</footer>
