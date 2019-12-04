@@ -6,8 +6,5 @@ class AddReferences < ActiveRecord::Migration[6.0]
     add_reference :questions, :test, foreign_key: true
 
     add_reference :answers, :question, foreign_key: true
-
-    add_reference :passed_tests, :user, foreign_key: true
-    add_reference :passed_tests, :test, foreign_key: true
   end
 end
