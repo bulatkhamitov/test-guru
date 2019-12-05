@@ -1,1 +1,10 @@
 <h1>The <%= @test_passage.test.title %> test has been completed!</h1>
+<strong><%= test_result(@test_passage) %></strong>
+<p>
+  Your score is
+    <span class=<%= test_status(@test_passage) %>>
+      <%= @test_passage.success_rate %>
+    </span>%
+</p>
+
+<%= link_to 'Back', tests_path %>
