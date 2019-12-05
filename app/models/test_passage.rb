@@ -15,8 +15,16 @@ class TestPassage < ApplicationRecord
   end
 
   def success_rate
-    correct_questions / test.questions.count * 100
+    correct_questions / total_questions * 100
   end
+
+  def total_questions
+    test.questions.count
+  end
+
+  def current_question_number
+    test.questions.index(current_question) + 1
+  end 
 
   def accept!(answer_ids)
     if correct_answer?(answer_ids)
