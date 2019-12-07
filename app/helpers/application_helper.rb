@@ -18,4 +18,8 @@ module ApplicationHelper
   def githib_url(author, repo)
     link_to 'github', "https://github.com/#{author}/#{repo}", target: :_blank
   end
+
+  def thinknetica
+    link_to "Онлайн-школа Thinknetica", "https://thinknetica.com/", target: :_blank
+  end
 end
