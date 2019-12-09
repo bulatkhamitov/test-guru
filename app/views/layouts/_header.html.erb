@@ -1,0 +1,9 @@
+<header class="header">
+  <% if logged_in?%>
+    <p class="nav user">Welcome, <b><%= current_user.name %></b> Guru</p>
+    <div class="nav logout">
+      <%= link_to 'Logout', logout_path, method: :delete %>
+    </div>
+  <% end %>
+</header>
+<hr align="center">
