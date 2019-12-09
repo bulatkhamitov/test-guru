@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'tests#index'
+  root 'main_page#show'
 
   get :signup, to: 'users#new'
 
