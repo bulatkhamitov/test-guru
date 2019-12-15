@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
   <p class="nav user">
-    Welcome, <b><%= current_user.name %></b> Guru
+    Welcome, <b><%= current_user.first_name %></b> Guru
   </p>
   <div class="nav logout">
     <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
