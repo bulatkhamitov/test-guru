@@ -1,6 +1,8 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :lockable, :timeoutable and :omniauthable
+  has_many :test_passages, dependent: :destroy
+  has_many :tests, through: :test_passages, dependent: :destroy
+  has_many :authored_tests, class_name: 'Test', dependent: :destroy
+
   devise :database_authenticatable,
          :registerable,
          :recoverable,
@@ -8,10 +10,6 @@ class User < ApplicationRecord
          :trackable,
          :validatable,
          :confirmable
-
-  has_many :test_passages, dependent: :destroy
-  has_many :tests, through: :test_passages, dependent: :destroy
-  has_many :authored_tests, class_name: 'Test', dependent: :destroy
 
   def passed_by_level(level)
     tests.where(level: level)
