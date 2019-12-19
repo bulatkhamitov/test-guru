@@ -9,13 +9,14 @@
 categories = Category.create!([{ title: 'Ruby' },
                                { title: 'Python' }])
 
-users = User.create!([{ name: 'Andrew',  email: 'andrew@compuserve.com', password: 'qwerty123' },
-                      { name: 'Brennan', email: 'brennan@yahoo.com',     password: 'zxcvbn456' },
-                      { name: 'Cullen',  email: 'cullen@gmail.com',      password: 'asdfgh789' }])
+users = User.create!([{ first_name: 'Andrew',  last_name: 'Scott',      email: 'andrew@compuserve.com', password: 'qwerty123', type: 'User'  },
+                      { first_name: 'Brennan', last_name: 'Larson',     email: 'brennan@yahoo.com',     password: 'zxcvbn456', type: 'User'  },
+                      { first_name: 'Cullen',  last_name: 'Rutherford', email: 'cullen@gmail.com',      password: 'asdfgh789', type: 'User'  },
+                      { first_name: 'Derrick', last_name: 'McReary',    email: 'derrick@outlook.com',   password: 'qwerty000', type: 'Admin' }])
 
-tests = Test.create!([{ title: 'Ruby Basics',     level: 0, author: users[1], category: categories[0] },
-                      { title: 'Python Basics',   level: 1, author: users[1], category: categories[1] },
-                      { title: 'Python Advanced', level: 2, author: users[1], category: categories[1] }])
+tests = Test.create!([{ title: 'Ruby Basics',     level: 0, author: users[3], category: categories[0] },
+                      { title: 'Python Basics',   level: 1, author: users[3], category: categories[1] },
+                      { title: 'Python Advanced', level: 2, author: users[3], category: categories[1] }])
 
 texts = ['What programming methodology does Ruby implement?',
          'What kind of type system does Ruby use?',
