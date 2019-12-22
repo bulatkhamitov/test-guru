@@ -30,6 +30,8 @@ gem 'devise', '~> 4.0'
 
 gem 'faraday'
 
+gem 'octokit', '~> 4.0'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
