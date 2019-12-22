@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+
+  test_passages:
+    result:
+      header: "The %{title} Test was com[leted!"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occured while saving gist"
