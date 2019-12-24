@@ -32,6 +32,8 @@
 en:
   hello: "Hello world"
 
+  gist_description: "A question about %{test_title} from TestGuru"
+
   test_passages:
     result:
       header: "The %{title} Test was com[leted!"

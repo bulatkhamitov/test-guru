@@ -1,4 +1,8 @@
 ru:
+  hello: "Здравствуй, мир"
+
+  gist_description: "Вопрос по %{test_title} из TestGuru"
+
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
