@@ -23,8 +23,4 @@ class User < ApplicationRecord
   def admin?
     is_a?(Admin)
   end
-
-  def hash
-    url.split('/').last
-  end
 end
