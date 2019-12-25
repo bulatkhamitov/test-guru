@@ -2,8 +2,6 @@ class TestPassagesController < ApplicationController
   before_action :find_test_passage, only: %i[show update result gist]
   before_action :authenticate_user!
 
-  ACCESS_TOKEN = '4a0084fe23eedba2a98a73f503e8217ebb2aaaa8'
-
   def show; end
 
   def result; end
@@ -20,7 +18,8 @@ class TestPassagesController < ApplicationController
   end
 
   def gist
-    result = GistQuestionService.new(@test_passage.current_question, Octokit::Client.new(access_token: ACCESS_TOKEN)).call
+    result = GistQuestionService.new(@test_passage.current_question,
+      Octokit::Client.new(access_token: Rails.application.credentials.access_token!)).call
 
     @gist = current_user.gists.create(question: @test_passage.current_question, url: result[:html_url])
 
