@@ -1,11 +1,26 @@
-<h1>Gists Table</h1>
-<table>
-  <tr>
-    <th>Question</th>
-    <th>Gist URL</th>
-    <th>User</th>
-  </tr>
-  <%= render @gists %>
-</table>
-
-<%= link_to "Back", admin_tests_path %>
+<!DOCTYPE html>
+<html>
+<head>
+  <style media="screen">
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 15px;
+    }
+  </style>
+</head>
+  <body>
+    <h1>Gists Table | <%= link_to "Back", admin_tests_path %>
+</h1>
+    <table style="width:100%">
+      <tr>
+        <th>Question</th>
+        <th>Gist URL</th>
+        <th>User</th>
+      </tr>
+      <%= render @gists %>
+    </table>
+  </body>
+</html>
