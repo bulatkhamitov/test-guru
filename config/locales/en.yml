@@ -36,7 +36,7 @@ en:
 
   test_passages:
     result:
-      header: "The %{title} Test was com[leted!"
+      header: "The %{title} Test was completed!"
     gist:
-      success: "Gist was successfully created!"
+      success: "%{gist_link} was successfully created!"
       failure: "An error occured while saving gist"
