@@ -2,6 +2,7 @@ class User < ApplicationRecord
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :authored_tests, class_name: 'Test', dependent: :destroy
+  has_many :gists, dependent: :destroy
 
   devise :database_authenticatable,
          :registerable,
