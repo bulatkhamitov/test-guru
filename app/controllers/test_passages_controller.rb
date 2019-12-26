@@ -18,8 +18,7 @@ class TestPassagesController < ApplicationController
   end
 
   def gist
-    result = GistQuestionService.new(@test_passage.current_question,
-      Octokit::Client.new(access_token: Rails.application.credentials.access_token!)).call
+    result = GistQuestionService.new(@test_passage.current_question).call
 
     @gist = current_user.gists.create(question: @test_passage.current_question, url: result[:html_url])
 
