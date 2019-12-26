@@ -24,7 +24,7 @@ class TestPassagesController < ApplicationController
     @gist = current_user.gists.create(question: @test_passage.current_question, url: result[:html_url])
 
     if @gist.save && result.present?
-      flash[:notice]= t('.success', gist_link: view_context.link_to("Gist", @gist.url, target: :_blank))
+      flash[:notice]= t('.success', gist_link: view_context.link_to("Open the link", @gist.url, target: :_blank))
     else
       flash[:alert] = t('.failure')
     end

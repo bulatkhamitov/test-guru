@@ -7,5 +7,5 @@ ru:
     result:
       header: "Тест %{title} успешно завершен!"
     gist:
-      success: "%{gist_link} успешно сохранен!"
+      success: "Gist успешно сохранен! %{gist_link}"
       failure: "Во время сохранения gist произошла ошибка"
