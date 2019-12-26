@@ -32,6 +32,14 @@ gem 'faraday'
 
 gem 'octokit', '~> 4.0'
 
+# USER INTERFACE
+
+gem 'jquery-rails'
+
+gem 'bootstrap'
+
+gem 'octicons_helper'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
