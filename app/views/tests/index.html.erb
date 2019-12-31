@@ -1,11 +1,15 @@
 <h1>List of tests</h1>
 
-<table border=1 frame=hsides rules=rows,columns, style="width:50%">
+<table class="table", border=1, frame=hsides,vsides, rules=rows,columns, style="width:100%">
   <tr>
-    <th>Title</th>
+    <th class="sort-by-title pointer">
+      Title
+      <%= octicon 'arrow-up', class: 'text-success hide' %>
+      <%= octicon 'arrow-down', class: 'text-success hide' %>
+    </th>
     <th>Level</th>
     <th>Questions</th>
-    <th>Actions</th>
+    <th>Action</th>
   </tr>
 
   <%= render @tests %>
