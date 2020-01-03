@@ -40,3 +40,17 @@ en:
     gist:
       success: " Gist was successfully created! %{gist_link}"
       failure: "An error occured while saving gist"
+
+  admin:
+    tests:
+      create:
+        success: "Test was successfully created."
+      index:
+        header: "Tricky tests"
+        create_new: "Create new test"
+      form_inline:
+        submit: "OK"
+
+  tests_mailer:
+    completed_test:
+      subject: "You have just completed the TestGuru test!"

@@ -9,3 +9,17 @@ ru:
     gist:
       success: "Gist успешно сохранен! %{gist_link}"
       failure: "Во время сохранения gist произошла ошибка"
+
+  admin:
+    tests:
+      create:
+        success: "Тест успешно добавлен."
+      index:
+        header: "Доступные тесты"
+        create_new: "Создать новый тест"
+      form_inline:
+        submit: "ОК"
+
+  test_mailer:
+    completed_test:
+      subject: "Вы успешно прошли тест на TesGuru!"
