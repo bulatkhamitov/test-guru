@@ -6,6 +6,13 @@ document.addEventListener('turbolinks:load', function () {
       controls[i].addEventListener('click', formInlineLinkHandler)
     }
   }
+
+  var errors = document.querySelector('.resource-errors')
+
+  if (errors) {
+    var resourceId = errors.dataset.resourceId
+    formInlineHandler(resourceId)
+   }
 })
 
 function formInlineLinkHandler(event) {
