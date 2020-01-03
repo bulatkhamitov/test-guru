@@ -1,10 +1,10 @@
 <tr>
-  <td>
+  <td class="align-middle">
     <%= content_tag :span, test.title, class: 'test-title', data: { test_id: test.id } %>
     <%= render 'form_inline', test: test == @test ? @test : test %>
   </td>
-  <td><%= test_level(test)%></td>
-  <td><%= number_of_questions(test) %></td>
+  <td class="align-middle"><%= test_level(test)%></td>
+  <td class="align-middle"><%= number_of_questions(test) %></td>
   <td class="align-middle" align="center"><%= link_to 'Show', admin_test_path(test) %></td>
   <td class="align-middle" align="center">
     <%= link_to 'Edit', edit_admin_test_path(test), data: { test_id: test.id }, class: 'form-inline-link' %>
