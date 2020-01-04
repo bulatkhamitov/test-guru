@@ -11,7 +11,7 @@ module TestGuru
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
     config.time_zone = "Moscow"
-    config.i18n.default_locale = :ru
+    config.i18n.default_locale = :en
 
     config.autoload_paths << "#{Rails.root}/lib/clients"
 
