@@ -30,6 +30,10 @@ class TestPassage < ApplicationRecord
     save!
   end
 
+  def progress
+    test.questions.index(current_question) + 1
+  end
+
   private
 
   def before_validation_find_question

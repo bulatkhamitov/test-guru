@@ -1,0 +1,17 @@
+.progress-bar {
+  width: 0.1%;
+  height: 20px;
+  background: repeating-linear-gradient(
+  45deg,
+  #606dbc,
+  #606dbc 10px,
+  #465298 10px,
+  #465298 20px
+);
+}
+
+.passage-progress {
+  width: 100%;
+  border: 1px solid black;
+  background: white;
+}
