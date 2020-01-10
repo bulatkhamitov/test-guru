@@ -32,6 +32,11 @@ a {
   }
 }
 
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
 th {
   padding-bottom: 5px;
 }
