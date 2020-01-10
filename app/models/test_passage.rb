@@ -34,6 +34,10 @@ class TestPassage < ApplicationRecord
     test.questions.index(current_question) + 1
   end
 
+  def time_is_up?
+    (Time.current - created_at).to_i >= test.time_limit
+  end
+
   private
 
   def before_validation_find_question
