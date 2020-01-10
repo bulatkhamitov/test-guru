@@ -1,0 +1,8 @@
+<%= content_tag :div,
+                class: 'passage-progress',
+                data: { total_questions: @test_passage.total_questions } do %>
+  <%= content_tag :div,
+                  class: 'progress-bar',
+                  data: { question: @test_passage.progress } do %>
+  <% end %>
+<% end %>
