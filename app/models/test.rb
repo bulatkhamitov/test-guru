@@ -19,4 +19,8 @@ class Test < ApplicationRecord
   def self.sorted_by_category(category)
     sort_by_category(category).pluck(:title)
   end
+
+  def time_limit_exists?
+    time_limit.present? && (time_limit > 0)
+  end
 end
