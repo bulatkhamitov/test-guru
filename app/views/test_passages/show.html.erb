@@ -1,12 +1,15 @@
 <h1>Passing the <%= @test_passage.test.title %> test</h1>
 
+<% if @test_passage.test.time_limit_exists? %>
+  <p>Time: <%= render 'timer' %></p>
+<% end %>
+
 <p>Progress bar:</p>
 
 <%= content_tag :div, class: 'passage-progress', data: { total_questions: @test_passage.total_questions } do %>
   <%= content_tag :div, class: 'progress-bar', data: { question: @test_passage.progress } do %>
   <% end %>
 <% end %>
-
 
 <p><%= @test_passage.current_question_index %> out of <%= @test_passage.total_questions %></p>
 
