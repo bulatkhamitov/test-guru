@@ -16,4 +16,8 @@ module TestsHelper
   def number_of_questions(test)
     test.questions.count
   end
+
+  def time_limit(test)
+    test.time_limit
+  end
 end
