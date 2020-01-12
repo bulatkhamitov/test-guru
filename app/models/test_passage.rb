@@ -27,6 +27,7 @@ class TestPassage < ApplicationRecord
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
+    self.current_question = test.questions.last if time_is_up?
     save!
   end
 
@@ -35,7 +36,9 @@ class TestPassage < ApplicationRecord
   end
 
   def time_is_up?
-    (Time.current - created_at).to_i >= test.time_limit
+    if test.time_limit_exists?
+      (Time.current - created_at).to_i >= test.time_limit
+    end
   end
 
   private
