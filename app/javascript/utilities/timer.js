@@ -5,20 +5,18 @@ document.addEventListener('turbolinks:load', function () {
 })
 
 function start() {
-  // const sec = 1000
-
   var initialTime = timer.dataset.initialTime
   var passageTime = timer.dataset.passageTime
   var elapsedTime = Math.trunc(Date.now() / 1000) - initialTime
   var remainingTime = passageTime - elapsedTime
 
   if (elapsedTime >= passageTime) {
-    var resultPage = window.location.href + '/result'
-    window.location.replace(resultPage)
+    document.querySelector('.test-passage-form').submit()
+    return
   }
 
   var hours   = Math.trunc(remainingTime / 3600)
-  var minutes = Math.floor((remainingTime - (hours * 3600)) / 60)
+  var minutes = Math.trunc((remainingTime - (hours * 3600)) / 60)
   var seconds = remainingTime - (hours * 3600) - (minutes * 60)
 
   if (seconds < 10) { seconds = '0' + seconds }
