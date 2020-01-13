@@ -5,6 +5,7 @@
   </td>
   <td class="align-middle"><%= test_level(test)%></td>
   <td class="align-middle"><%= number_of_questions(test) %></td>
+  <td class="align-middle"><%= time_limit(test) %> seconds </td>
   <td class="align-middle" align="center"><%= link_to 'Show', admin_test_path(test) %></td>
   <td class="align-middle" align="center">
     <%= link_to 'Edit', edit_admin_test_path(test), data: { test_id: test.id }, class: 'form-inline-link' %>

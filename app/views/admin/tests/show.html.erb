@@ -8,7 +8,12 @@
   <%= @test.level %>
 </p>
 
-<table border=1 frame=hsides rules=rows,columns>
+<p>
+  <strong>Time:</strong>
+  <%= @test.time_limit %> (in seconds)
+</p>
+
+<table class="table">
   <tr>
     <th>Question</th>
     <th colspan="3">Actions</th>

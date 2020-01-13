@@ -1,0 +1,5 @@
+<%= content_tag :span,
+                '',
+                id: 'timer',
+                data: { initial_time: @test_passage.created_at.to_i,
+                        passage_time: @test_passage.test.time_limit } %>

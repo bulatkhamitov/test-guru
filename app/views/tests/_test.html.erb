@@ -2,5 +2,6 @@
   <td><%= test.title %></td>
   <td><%= test_level(test)%></td>
   <td><%= number_of_questions(test) %></td>
+  <td><%= test.time_limit %> seconds </td>
   <td><%= link_to 'Start', start_test_path(test), method: :post %></td>
 </tr>
