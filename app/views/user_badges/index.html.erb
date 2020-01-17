@@ -1,0 +1,14 @@
+<% if @badges.empty? %>
+  <p>You have no badges so far.</p>
+<% else %>
+  <p>You have earned the following badges:</p>
+
+<table class="table">
+  <tr>
+    <th>Icon</th>
+    <th>Title</th>
+  </tr>
+
+  <%= render @badges %>
+</table>
+<% end %>
