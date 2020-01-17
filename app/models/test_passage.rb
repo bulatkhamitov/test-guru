@@ -26,8 +26,14 @@ class TestPassage < ApplicationRecord
   end
 
   def accept!(answer_ids)
-    self.correct_questions += 1 if correct_answer?(answer_ids)
-    current_question = nil if time_is_up?
+    if time_is_up?
+      self.passed = false
+      current_question = nil
+    else
+      self.correct_questions += 1 if correct_answer?(answer_ids)
+      self.passed = passed?
+    end
+
     save!
   end
 
