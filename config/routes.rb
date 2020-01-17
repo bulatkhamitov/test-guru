@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   resources :badges, only: %i[index]
 
+  resources :user_badges, only: %i[index]
+
   namespace :admin do
     resources :badges, shallow: true
     resources :gists, only: %i[index]
