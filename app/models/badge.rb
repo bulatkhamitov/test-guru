@@ -4,4 +4,10 @@ class Badge < ApplicationRecord
 
   validates :title, :icon_url, presence: true
   validates :rule, presence: true, allow_blank: true
+
+  def self.icons
+    Dir.entries('app/assets/images/badges').reject do |file|
+      File.directory?(file)
+    end
+  end
 end
