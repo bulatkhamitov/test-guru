@@ -19,7 +19,9 @@ Rails.application.routes.draw do
   resources :user_badges, only: %i[index]
 
   namespace :admin do
-    resources :badges, shallow: true
+    resources :badges do
+      get :choose_rule, on: :collection
+    end
     resources :gists, only: %i[index]
     resources :tests do
       patch :update_inline, on: :member
