@@ -1,0 +1,10 @@
+<h3>What kind of badge would you like to create?</h3>
+
+<%= form_with url: new_admin_badge_path, method: :get, local: true do |form| %>
+  <p>
+    <%# form.label :rule %>
+    <%= form.select :rule, Badge::RULES %>
+  </p>
+
+  <%= form.submit 'Next' %>
+<% end %>
