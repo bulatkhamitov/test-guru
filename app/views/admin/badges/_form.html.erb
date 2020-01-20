@@ -13,6 +13,19 @@
     <%= form.select :icon_url, Badge.icons, prompt: 'Choose image file' %>
   </p>
 
+  <p>
+    <% case @badge_rule %>
+    <% when 'CategoryBadge' %>
+      <%=  render 'category_rule', form: form %>
+    <% when 'LevelBadge' %>
+      <%=  render 'level_rule', form: form %>
+    <% when 'FirstTryBadge' %>
+      <%=  render 'first_try_rule', form: form %>
+    <% end %>
+  </p>
+
+  <%= form.hidden_field :rule, value: @badge_rule %>
+
  <%= form.submit %>
 
 <% end %>
