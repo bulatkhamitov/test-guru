@@ -45,11 +45,11 @@ answers = Answer.create!([{ correct: true,  text: 'Object Oriented Programming',
                           { correct: true,  text: 'O(nlog(n))',                  question: questions[5] },
                           { correct: false, text: 'O(n^2)',                      question: questions[5] }])
 
-test_passages = TestPassage.create!([{ user: users[0], test: tests[0] },
-                                     { user: users[1], test: tests[0] },
-                                     { user: users[1], test: tests[1] },
-                                     { user: users[2], test: tests[2] }])
-
-badges = Badge.create!([{ title: 'Test badge 1', icon_url: 'badge_1.png', rule: 'Rails' },
-                        { title: 'Test badge 2', icon_url: 'badge_2.png', rule: '1' },
-                        { title: 'Test badge 3', icon_url: 'badge_3.png', rule: '' }])
+# test_passages = TestPassage.create!([{ user: users[0], test: tests[0] },
+#                                      { user: users[1], test: tests[0] },
+#                                      { user: users[1], test: tests[1] },
+#                                      { user: users[2], test: tests[2] }])
+#
+# badges = Badge.create!([{ title: 'Test badge 1', icon_url: 'badge_1.png', rule_value: 'Rails' },
+#                         { title: 'Test badge 2', icon_url: 'badge_2.png', rule_value: '1' },
+#                         { title: 'Test badge 3', icon_url: 'badge_3.png', rule_value: '1' }])
