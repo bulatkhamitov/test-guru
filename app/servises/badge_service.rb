@@ -1,4 +1,8 @@
 class BadgeService
+  RULES = %w[FirstTryBadge
+             CategoryBadge
+             LevelBadge].freeze
+             
   def initialize(test_passage)
     @test_passage = test_passage
     @user = test_passage.user
