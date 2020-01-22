@@ -1,7 +1,7 @@
 class Badge < ApplicationRecord
   RULES = %w[FirstTryBadge
              CategoryBadge
-             LevelBadge]
+             LevelBadge].freeze
 
   has_many :user_badges, dependent: :destroy
   has_many :users, through: :user_badges
