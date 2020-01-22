@@ -54,3 +54,10 @@ en:
   tests_mailer:
     completed_test:
       subject: "You have just completed the TestGuru test!"
+
+  first_try_badge:
+    rule_desc: 'First try badge'
+  category_badge:
+    rule_desc: 'All tests with category'
+  level_badge:
+    rule_desc: 'All tests with one level'

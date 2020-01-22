@@ -23,3 +23,10 @@ ru:
   test_mailer:
     completed_test:
       subject: "Вы успешно прошли тест на TesGuru!"
+
+  first_try_badge:
+    rule_desc: 'С первой попытки'
+  category_badge:
+    rule_desc: 'Все тесты одной категории'
+  level_badge:
+    rule_desc: 'Все тесты одного уровня'
