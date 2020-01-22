@@ -3,7 +3,7 @@
 <%= form_with url: new_admin_badge_path, method: :get, local: true do |form| %>
   <p>
     <%# form.label :rule %>
-    <%= form.select :rule, Badge::RULES %>
+    <%= form.select :rule, rules_collection %>
   </p>
 
   <%= form.submit 'Next' %>
