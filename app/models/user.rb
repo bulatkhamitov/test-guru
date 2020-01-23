@@ -25,4 +25,8 @@ class User < ApplicationRecord
   def admin?
     is_a?(Admin)
   end
+
+  def rewarded?(badge)
+    UserBadge.where(user: self, badge: badge).present?
+  end
 end
