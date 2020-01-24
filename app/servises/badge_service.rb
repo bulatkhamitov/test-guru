@@ -65,6 +65,6 @@ class BadgeService
   end
 
   def last_badge_date(badge)
-    UserBadge.all.where(user: @user, badge: badge).oder('created_at').last.created_at
+    UserBadge.all.where(user: @user, badge: badge).order('created_at').last.created_at
   end
 end
