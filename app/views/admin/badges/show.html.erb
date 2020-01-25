@@ -1,0 +1,8 @@
+<h3>Edit <%= @badge.title %></h3>
+
+<p>Title: <%= @badge.title %></p>
+<p>Icon: <%= image_tag(@badge.icon_url, width: '64', height: '64') %></p>
+<p>Rule: <%= @badge.rule %></p>
+<p>Value: <%= @badge.rule_value %></p>
+
+<%= link_to 'Back', admin_badges_path %>

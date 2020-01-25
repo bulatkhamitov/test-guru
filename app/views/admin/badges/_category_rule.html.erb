@@ -1,0 +1,2 @@
+<%= form.label :category %><br>
+<%= form.collection_select :rule_value, Category.all, :id, :title, prompt: true %>

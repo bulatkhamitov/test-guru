@@ -1,0 +1,12 @@
+<h3>Badges</h3>
+
+<table class="table" border=1, frame=hsides,vsides, style="width:100%">
+<tr>
+  <th>Icon</th>
+  <th>Title</th>
+  <th colspan="3">Actions</th>
+</tr>
+<%= render @badges %>
+</table>
+
+<%= link_to 'New badge', choose_rule_admin_badges_path %>

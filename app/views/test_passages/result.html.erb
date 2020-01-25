@@ -4,7 +4,7 @@
 <p>
   Your score is
     <span class=<%= test_status(@test_passage) %>>
-      <%= @test_passage.success_rate %>
+      <%= @test_passage.success_rate.round(2) %>
     </span>%
 </p>
 

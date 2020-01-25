@@ -14,7 +14,14 @@ Rails.application.routes.draw do
     post :gist, on: :member
   end
 
+  resources :badges, only: %i[index]
+
+  resources :user_badges, only: %i[index]
+
   namespace :admin do
+    resources :badges do
+      get :choose_rule, on: :collection
+    end
     resources :gists, only: %i[index]
     resources :tests do
       patch :update_inline, on: :member

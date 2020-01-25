@@ -1,0 +1,12 @@
+<h3>Badges overview</h3>
+
+<table class="table">
+  <tr>
+    <th>Title</th>
+    <th>Icon</th>
+  </tr>
+  <%= render @badges %>
+</table>
+
+<%= link_to 'Back', root_path %> |
+<%= link_to 'My badges', user_badges_path %>
